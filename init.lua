@@ -23,6 +23,8 @@ kernel.start_main_loop(game.make_game(
     game.opengl_2d.height = 480
     game.init_component('constants')
 
+    table.foreach(require('ai_loader').load_all(), print)
+
     game.actors.new(blueprints.player,
       {'transform', pos = v2(100, 100)},
       {'ai', ai=java_ai.make("Test")})
