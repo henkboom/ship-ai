@@ -6,6 +6,6 @@ function update()
     self.ship.thrust()
   end
   if game.keyboard.key_held(string.byte(' ')) then
-    self.ship.shoot()
+    self.ship.shoot(math.atan2(self.transform.facing.y, self.transform.facing.x))
   end
 end
